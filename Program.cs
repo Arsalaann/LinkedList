@@ -15,11 +15,16 @@
 
 
 
+            //list.DisplayList(root);
+            //list.Remove(root,40);
+
             list.DisplayList(root);
 
-            list.Remove(root,40);
+            list.Sort(root);
 
+            Console.WriteLine("\nSorted List: ");
             list.DisplayList(root);
+            Console.WriteLine("Size is: "+list.Size(root));
 
             // int outcome=list.Search(root,30);
             // if(outcome!=-1)

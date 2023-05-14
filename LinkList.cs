@@ -71,6 +71,34 @@ namespace LinkedList{
             
         }
 
+        public int Size(LinkList root){
+            int n=0;
+            if(root==null)
+                return n;
+            while(root!=null){
+                root=root.next;
+                n++;
+            }
+            return n;
+        }
+
+        public void Sort(LinkList root){
+            if(root==null)  return;
+            LinkList st=root;
+            while(st!=null){
+                LinkList itr=st,sm=st;
+                while(itr!=null){
+                    if(itr.data<sm.data)
+                        sm=itr;
+                    itr=itr.next;
+                }
+                int tmp=st.data;
+                st.data=sm.data;
+                sm.data=tmp;
+                st=st.next;
+            }
+        }
+
         public void Remove(LinkList root,int data){
             if(root==null){
                 Console.WriteLine("No Node to remove....");
