@@ -7,17 +7,23 @@
 
             list.Insert(root,56,70,30);
 
+            list.Insert(root,30,70,40);
+
             //root=list.Pop(root);
 
             //list.PopLast(root);
 
+
+
             list.DisplayList(root);
 
-            int outcome=list.Search(root,30);
-            if(outcome!=-1)
-                Console.WriteLine("Node present at position: "+outcome);
-            else
-                Console.WriteLine("Node not found....");
+            // int outcome=list.Search(root,30);
+            // if(outcome!=-1)
+            //     Console.WriteLine("Node present at position: "+outcome);
+            // else
+            //     Console.WriteLine("Node not found....");
+
+            
         }
     }
 }
