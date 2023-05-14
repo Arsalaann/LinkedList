@@ -7,6 +7,8 @@
 
             list.Insert(root,56,70,30);
 
+            root=list.Pop(root);
+
             list.DisplayList(root);
         }
     }

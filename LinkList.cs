@@ -34,6 +34,10 @@ namespace LinkedList{
             
         }
 
+        public LinkList Pop(LinkList root){
+            return root.next;
+        }
+
         public void DisplayList(LinkList root){
             if(root==null) return;
             while(root!=null){
