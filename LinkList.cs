@@ -42,6 +42,19 @@ namespace LinkedList{
             return root.next;
         }
 
+        public int Search(LinkList root,int data){
+            if(root==null)
+                return -1;
+            int ind=1;
+            while(root!=null && root.data!=data){
+                root=root.next;
+                ind++;
+            }
+            if(root==null)
+                return -1;
+            return ind;
+        }
+
         public void PopLast(LinkList root){
             if(root==null)
                 Console.WriteLine("No Nodes to delete");
