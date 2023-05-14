@@ -35,9 +35,28 @@ namespace LinkedList{
         }
 
         public LinkList Pop(LinkList root){
+            if(root==null){
+                Console.WriteLine("No Nodes to delete");
+                return null;
+            }
             return root.next;
         }
 
+        public void PopLast(LinkList root){
+            if(root==null)
+                Console.WriteLine("No Nodes to delete");
+            else if(root.next==null)
+                root=null;
+            else{
+                LinkList prev=root;
+                while(root.next != null){
+                    prev=root;
+                    root=root.next;
+                }
+                prev.next=null;
+            }
+            
+        }
         public void DisplayList(LinkList root){
             if(root==null) return;
             while(root!=null){
