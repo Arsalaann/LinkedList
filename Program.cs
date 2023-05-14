@@ -17,6 +17,10 @@
 
             list.DisplayList(root);
 
+            list.Remove(root,40);
+
+            list.DisplayList(root);
+
             // int outcome=list.Search(root,30);
             // if(outcome!=-1)
             //     Console.WriteLine("Node present at position: "+outcome);

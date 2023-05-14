@@ -70,6 +70,27 @@ namespace LinkedList{
             }
             
         }
+
+        public void Remove(LinkList root,int data){
+            if(root==null){
+                Console.WriteLine("No Node to remove....");
+                return;
+            }
+            if(root.data==data){
+                this.Pop(root);
+                return;
+            }
+            LinkList prev=root;
+            while(root!=null && root.data!=data){
+                prev=root;
+                root=root.next;
+            }
+            if(root==null){
+                Console.WriteLine("Node not found....");
+                return;
+            }
+            prev.next=root.next;
+        }
         public void DisplayList(LinkList root){
             if(root==null) return;
             while(root!=null){
