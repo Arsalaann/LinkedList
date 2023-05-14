@@ -17,13 +17,30 @@ namespace LinkedList{
             return root;
         }
 
+        public void Insert(LinkList root,int beforeNode,int afterNode,int data){
+            if(root==null){
+                Console.WriteLine("List is Empty...");
+                return;
+            }
+            while(root!=null && root.next!=null && (root.data!=beforeNode && root.next.data!=afterNode))
+                root=root.next;
+            if(root==null)
+                Console.WriteLine("Nodes not fount...");
+            else{
+                LinkList inMiddle=new LinkList(data);
+                inMiddle.next=root.next;
+                root.next=inMiddle;
+            }
+            
+        }
+
         public void DisplayList(LinkList root){
             if(root==null) return;
             while(root!=null){
                 Console.Write(root.data+"-->");
                 root=root.next;
             }
-            Console.WriteLine();
+            Console.WriteLine("END");
         }
     }
 }
